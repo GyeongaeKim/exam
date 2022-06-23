@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	<h2>변수</h2>
+	
+	
+</body>
+
+<script type="text/javascript">
+	console.log("변수선언");	//자료형을 쓸 필요 없다. int String...etc.
+	
+	var myAge;
+	var str;
+	var boo;
+	
+	var myAge = 25;
+	
+	
+	
+</script>
+
+
+<script type="text/javascript">
+	console.log("같은 이름 변수선언");
+	
+	var person = "정우성";
+	var person = "이효리";
+	console.log(person);
+	
+	var person = "유재석";
+	console.log(person);
+	
+	
+</script>
+
+
+<script type="text/javascript">
+	console.log("대입시 자료형 결정");
+	
+	var data;
+	console.log(typeof data);	//아직 대입을 안했기때문에, undefined
+	
+	data = 15;					//값 대입
+	console.log(typeof data);	//자료형 number형으로 결정!
+	
+	
+	
+	data = "안녕";
+	console.log(typeof data);	//자료형 string으로 변경
+	
+	data = 5>3;
+	console.log(typeof data);	//자료형 boolean으로 변경
+	
+	data = true;
+	console.log(typeof data);	//자료형 boolean으로 변경
+	
+	
+</script>
+
+
+<script type="text/javascript">
+	console.log("undefined, null 비교");
+	
+	var myVar01;
+	var myVar02 = null;			//null도 하나의 자료형이다-object
+	
+	console.log(typeof myVar01);	//undefined
+	console.log(typeof myVar02);	//object
+	
+	
+</script>
+
+
+<script type="text/javascript">
+	console.log("undefined, null 비교");
+	console.log("===는 자료형까지 비교한다/일치연산자");
+	console.log("==는 동등연산자");
+	
+	console.log("123" == 123);	//true
+	console.log("123" === 123);	//false
+	
+	console.log(myVar01 == myVar02);	//undefined == null --> true
+	console.log(myVar01 === myVar02);	//false
+	
+	
+	
+	console.log('' == false);		//true
+	console.log('' == 0);			//true
+	console.log(0 == false);		//true
+	
+	console.log('' === false);		//false
+	console.log('' === 0);			//false
+	console.log(0 === false);		//false
+	
+	
+	console.log("--------------------")
+	console.log('' == false);		//true
+	console.log('' === false);		//false
+	
+</script>
+</html>
