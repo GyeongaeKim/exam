@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-caption{
-    font-size: 27px;
-    color : pink;
-}
+
 table{
     width : 300px;
     border: 2px solid lightgray; 
@@ -23,15 +20,15 @@ td{
 td > input[type="button"] {
     width: 100%;
     height: inherit;
-    color :  #82b3c9;
+    color : lightcoral;
     font-size: 32px;
-    background-color: lightblue;
+    background-color: lightpink;
     border : none;
 }
 td>input[type="button"]:hover{
-    background-color: #fff59d;
+    background-color: lightblue;
 }
 td:last-child > input{
-    background : #82b3c9;
+    background : lightcoral;
     color : white;
 }
