@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	<h2>객체</h2>
+	
+</body>
+
+<script type="text/javascript">
+	var array = [];
+	var guestbookVo = {
+			name: "홍길동",
+			password: "1234",
+			content: "안녕하세요",
+			showInfo: function(){
+				console.log(this.name +", "+ this.password + ", " + this.content)
+			}
+	};
+	
+	console.log(guestbookVo);
+	
+	var name = guestbookVo.name;
+	console.log(name);
+	
+	console.log(guestbookVo.password);
+	console.log(guestbookVo.content);
+	
+	
+	guestbookVo.showInfo();
+	
+	
+	
+	
+	
+	
+	/////////////////////////////////////////////////////////////////////
+	var personVo01 = {
+			name: "홍길동",
+			hp: "010-1234-5678",
+			company: "02-123-0000",
+	};
+	console.log(personVo01);
+	
+	
+	
+	
+	var personVo02 = {
+		name: "유재석",
+		hp: "010-9999-8888"
+	};
+	personVo02.company="02-555-6666";	//이렇게 필드를 나중에 추가할 수 있다.
+	personVo02.age=45;					//의도하지 않았다면 주의할 필요가 있다.
+	console.log(personVo02);
+	
+	
+	
+	
+	
+	
+	var personVo03 = {};
+	personVo03.name = "이효리";
+	personVo03.hp = "010-7878-6565";
+	personVo03.company = "02-2222-2222";
+	console.log(personVo03);
+	
+	
+	
+	
+	
+</script>
+
+</html>
