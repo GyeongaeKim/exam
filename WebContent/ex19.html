@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+</head>
+<link rel="stylesheet" type="text/css" href="calStyle.css">
+
+<body>
+	<h1>자바스크립트</h1>
+	<h2>계산기(응용)</h2>
+	
+	<table>
+		<caption>★ c a l c u l a t o r ★</caption>
+		<tr>
+			<th colspan="4">
+				<p id="display"></p>
+			</th>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<input id="ac" type="button" value="AC">
+			</td>
+		</tr>
+		
+		<tr>
+			<td><input id="no7" type="button" value="7"></td>
+			<td><input id="no8" type="button" value="8"></td>
+			<td><input id="no9" type="button" value="9"></td>
+			<td><input id="div" class="cal" type="button" value=" / "></td>
+		</tr>
+		
+		<tr>
+			<td><input id="no4" type="button" value="4"></td>
+			<td><input id="no5" type="button" value="5"></td>
+			<td><input id="no6" type="button" value="6"></td>
+			<td><input id="mul" class="cal" type="button" value=" * "></td>
+		</tr>
+		
+		<tr>
+			<td><input id="no1" type="button" value="1"></td>
+			<td><input id="no2" type="button" value="2"></td>
+			<td><input id="no3" type="button" value="3"></td>
+			<td><input id="sub" class="cal" type="button" value=" - "></td>
+		</tr>
+		
+		<tr>
+			<td><input id="no0" type="button" value="0"></td>
+			<td><input id="point" type="button" value="."></td>
+			<td><input id="result" type="button" value="="></td>
+			<td><input id="add" class="cal" type="button" value=" + "></td>
+		</tr>
+	</table>
+	
+</body>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var display = document.getElementById("display");
+		var no0 = document.getElementById("no0");
+		var no1 = document.getElementById("no1");
+		var no2 = document.getElementById("no2");
+		var no3 = document.getElementById("no3");
+		var no4 = document.getElementById("no4");
+		var no5 = document.getElementById("no5");
+		var no6 = document.getElementById("no6");
+		var no7 = document.getElementById("no7");
+		var no8 = document.getElementById("no8");
+		var no9 = document.getElementById("no9");
+		var point = document.getElementById("point");
+		
+		var cal = document.getElementsByClassName("cal");
+		var div = document.getElementById("div");
+		var mul = document.getElementById("mul");
+		var sub = document.getElementById("sub");
+		var add = document.getElementById("add");
+		
+		var result = document.getElementById("result");
+		//var ac = document.getElementById("ac");
+		
+		var total = ""
+
+		
+		
+		
+		
+		
+		no0.onclick = function(){
+			var n0 = no0.value;
+			display.innerHTML = total+=n0;
+		};
+		no1.onclick = function(){
+			var n1 = no1.value;
+			display.innerHTML = total+=n1;
+		};
+		no2.onclick = function(){
+			var n2 = no2.value;
+			display.innerHTML = total+=n2;
+		};
+		no3.onclick = function(){
+			var n3 = no3.value;
+			display.innerHTML = total+=n3;
+		};
+		no4.onclick = function(){
+			var n4 = no4.value;
+			display.innerHTML = total+=n4;
+		};
+		no5.onclick = function(){
+			var n5 = no5.value;
+			display.innerHTML = total+=n5;
+		};
+		no6.onclick = function(){
+			var n6 = no6.value;
+			display.innerHTML = total+=n6;
+		};
+		no7.onclick = function(){
+			var n7 = no7.value;
+			display.innerHTML = total+=n7;
+		};
+		no8.onclick = function(){
+			var n8 = no8.value;
+			display.innerHTML = total+=n8;
+		};
+		no9.onclick = function(){
+			var n9 = no9.value;
+			display.innerHTML = total+=n9;
+		};
+		
+		
+		
+		
+		
+		div.onclick = function(){
+			var div1 = div.value;
+			display.innerHTML = total+=div1;
+		};
+		mul.onclick = function(){
+			var mul1 = mul.value;
+			display.innerHTML = total+=mul1;
+		};
+		sub.onclick = function(){
+			var sub1 = sub.value;
+			display.innerHTML = total+=sub1;
+		};
+		add.onclick = function(){
+			var add1 = add.value;
+			display.innerHTML = total+=add1;
+		};
+		point.onclick = function(){
+			var point1 = point.value;
+			display.innerHTML = total+=point1;
+		};
+
+		
+		
+		
+		result.onclick = function(){
+			console.log(display.textContent);
+			var result1 = display.textContent;
+			
+			var result2 = result1.split(" ");
+			var operator = result2[1]
+			var fig1 = Number(result2[0]);
+			var fig2 = Number(result2[2]);
+			console.log(fig1);
+			console.log(operator);
+			console.log(fig2);
+			
+			
+			switch(operator){
+				case "+":
+					display.innerHTML = (fig1+fig2);
+					break;
+				case "-":
+					display.innerHTML = (fig1-fig2);
+					break;
+				case "*":
+					display.innerHTML = (fig1*fig2);
+					break;
+				case "/":
+					display.innerHTML = (fig1/fig2);
+					break;
+			};			
+		};
+		
+		
+	};
+
+</script>
+
+
+
+</html>
