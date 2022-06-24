@@ -36,8 +36,13 @@
 	
 	
 	
+	var personVo = {
+		name: "유재석",
+		hp: "010",
+		company: "02"
+	};
 	
-	var array2 = [273, "문자열", 5>3, plus(3, 5), plus, function(){return 5+100}, [273, 103]];
+	var array2 = [273, "문자열", 5>3, plus(3, 5), plus, function(){return 5+100}, [273, 103], personVo];
 	console.log(array2[0]);
 	console.log(array2[1]);
 	console.log(array2[2]);
@@ -49,7 +54,11 @@
 	console.log(array2[6]);
 	console.log(array2[6][0]);		//배열 속의 배열!
 	console.log(array2[6][1]);		//배열 속의 배열!
-			
+	console.log(array2[7]);			//personVo
+	
+	var name = array2[7].name;
+	console.log(name);				//personVo 중에서 원하는 값만 뽑아보기
+	
 	function plus(a, b){
 		var sum = a + b;
 		return sum
