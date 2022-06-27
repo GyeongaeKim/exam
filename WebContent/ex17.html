@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+
+
+
 </head>
 <body>
 	<h1>자바스크립트</h1>
@@ -18,18 +23,40 @@
 </body>
 
 <script type="text/javascript">
-	window.onload = function(){
-		var testButton = document.getElementById("btn");	//태그 --> 자바스크립트객체화 
-		var testArea = document.getElementById("display");
-		console.log(testArea);
-		
-		testButton.onclick = function(){	//click이벤트
-			console.log("버튼출력");
-			testArea.innerHTML = "<font color='lightpink'>홍길동</font>";
-		};
+window.onload = function(){
+
+	/*
+	var testButton = document.getElementById("btn");	//태그 --> 자바스크립트객체화 
+	var testArea = document.getElementById("display");
+	console.log(testArea);
+	
+	testButton.onclick = function(){	//click이벤트
+		console.log("버튼출력");
+		testArea.innerHTML = "<font color='lightpink'>홍길동</font>";
 	};
+	*/
 	
 	
+	
+	//jquery 이벤트 처리***************************
+	var testButton = $("#btn");		//id -#, className-., tagName-아무것도 없이...
+	var testArea = $("#display");
+	
+	console.log(testButton);
+	console.log(testArea);
+	
+	
+	testButton.on("click", function(){
+		console.log("출력 jquery");
+		
+		testArea.html("<font color='lightpink'>둘리</font>");
+	});
+	
+	
+	
+	
+	
+};
 	
 </script>
 

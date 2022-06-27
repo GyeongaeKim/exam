@@ -8,36 +8,54 @@
 	<h1>자바스크립트</h1>
 	<h2>계산기(더하기)</h2>
 	
-	<input id="left" type="text" value=""> + <input id="right" type="text" value="">
-	<button id="btnPlus" type="button">더하기</button>
+	<input id="left" class="red" type="text" value=""> + <input id="right" type="text" value="">
+	<button id="btnPlus"  class="red" type="button">더하기</button>
 	<br>
 	<p id="display"> = 결과</p>
 	
 </body>
 
 <script type="text/javascript">
-	window.onload = function(){
-		var btnPlus = document.getElementById("btnPlus");
-		var left = document.getElementById("left");
-		var right = document.getElementById("right");
-		var display = document.getElementById("display");
-		console.log(display);
+window.onload = function(){
+	
+	
+	var btn = document.getElementsByTagName("button");
+	console.log(btn);
+	
+	var inputs = document.getElementsByTagName("input");	//태그로 가져오기
+	console.log(inputs);		//태그로 가져오기->여러값이 나오기때문에 배열로 나타난다.
+	console.log(inputs[0]);
+	console.log(inputs[1]);
+	
+	
+	var tags = document.getElementsByClassName("red");		//클래스네임
+	console.log(tags);
+	console.log(tags[0]);
+	console.log(tags[1]);
+	
+	
+	
+	var btnPlus = document.getElementById("btnPlus");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var display = document.getElementById("display");
+	console.log(display);
+	
+	btnPlus.onclick = function(){
+		console.log("더하기버튼");
 		
-		btnPlus.onclick = function(){
-			console.log("더하기버튼");
-			
-			var leftNo = parseInt(left.value);
-			var rightNo = parseInt(right.value);
-			console.log(typeof leftNo + leftNo);
-			console.log(typeof rightNo + rightNo);
-			
-			var sum = leftNo + rightNo;
-			console.log(sum);
-			
-			
-			display.innerHTML = sum;
-		};
+		var leftNo = parseInt(left.value);
+		var rightNo = parseInt(right.value);
+		console.log(typeof leftNo + leftNo);
+		console.log(typeof rightNo + rightNo);
+		
+		var sum = leftNo + rightNo;
+		console.log(sum);
+		
+		
+		display.innerHTML = sum;
 	};
+};
 
 </script>
 
